@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+import PathRouter from './layout/PathRouter';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <br/>
+      <BrowserRouter>
+        <Header/>
+        <PathRouter/>
+      </BrowserRouter>
+      
+      {/* footer */}
+      <br/><br/>
+      <div className='mt-5'>
+        <Footer/>
+      </div>
+      {/* end footer */}
     </div>
   );
 }
